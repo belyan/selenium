@@ -27,7 +27,7 @@ def driver(request):
 def test_google_search(driver):
     driver.get("http://www.google.com/")
     driver.find_element_by_name("q").send_keys("webdriver")
-    search_box = driver.find_element_by_name('q')
+    search_box = driver.find_element_by_name("q")
     search_box.submit()
     WebDriverWait(driver, 1).until(ec.title_is("webdriver - Поиск в Google"))
 
